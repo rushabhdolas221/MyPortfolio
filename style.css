@@ -331,3 +331,34 @@ nav {
 .about-card p:last-child {
     margin-bottom: 0;
 }
+.project-links {
+    margin-top: 15px;
+}
+
+.project-btn {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 18px;
+    background: transparent;
+    border: 1px solid rgba(255,80,120,0.4);
+    color: #ff9db3;
+    font-size: 13px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.project-btn:hover {
+    background: linear-gradient(135deg, #ff4d6d, #7a0c2e);
+    color: #fff;
+    box-shadow: 0 0 15px rgba(255,80,120,0.5);
+}
+.dev-badge {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    background: rgba(255, 180, 0, 0.15);
+    border: 1px solid rgba(255, 180, 0, 0.4);
+    color: #ffc107;
+}
