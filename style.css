@@ -1,4 +1,4 @@
-/* ================= BLACK GLASS PROFESSIONAL THEME ================= */
+/* ================= GLOBAL ================= */
 
 * {
     margin: 0;
@@ -21,7 +21,7 @@ body {
     padding-top: 140px;
 }
 
-/* ================= FLOATING GLASS NAVBAR ================= */
+/* ================= NAVBAR ================= */
 
 header {
     position: fixed;
@@ -43,29 +43,23 @@ nav {
     gap: 2.5rem;
     padding: 16px 45px;
     border-radius: 50px;
-
     background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(30px);
     -webkit-backdrop-filter: blur(30px);
-
     border: 1px solid rgba(255, 255, 255, 0.18);
-
     box-shadow:
         0 15px 40px rgba(0, 0, 0, 0.8),
         inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
-/* IMPORTANT: Smooth scaling base */
 .nav-links li {
     transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
-/* Hover scale effect */
 .nav-links li:hover {
     transform: scale(1.15);
 }
 
-/* Slight shrink of others (dock feel) */
 .nav-links:hover li:not(:hover) {
     transform: scale(0.92);
     opacity: 0.6;
@@ -84,24 +78,20 @@ nav {
     color: #ffffff;
 }
 
-/* ================= FLOATING GLASS SECTIONS ================= */
+/* ================= SECTIONS (GLASS EFFECT) ================= */
 
 .section {
     padding: 120px 8%;
     margin: 80px auto;
     max-width: 1200px;
-
     background: rgba(255,255,255,0.04);
     backdrop-filter: blur(22px);
     -webkit-backdrop-filter: blur(22px);
-
     border: 1px solid rgba(255,255,255,0.1);
     border-radius: 28px;
-
     box-shadow:
         0 20px 60px rgba(0,0,0,0.85),
         inset 0 1px 0 rgba(255,255,255,0.05);
-
     transition: all 0.4s ease;
 }
 
@@ -115,7 +105,6 @@ nav {
 .section h2 {
     font-size: 28px;
     margin-bottom: 40px;
-    color: #ffffff;
     font-family: "Orbitron", sans-serif;
     letter-spacing: 2px;
 }
@@ -139,7 +128,7 @@ nav {
     color: #bdbdbd;
 }
 
-/* ================= BUTTONS ================= */
+/* ================= GLASS BUTTON (USED EVERYWHERE) ================= */
 
 .buttons {
     margin-top: 25px;
@@ -148,19 +137,23 @@ nav {
 }
 
 .btn {
-    padding: 10px 20px;
-    border-radius: 25px;
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.2);
+    padding: 10px 22px;
+    border-radius: 30px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 14px;
     text-decoration: none;
-    color: #fff;
     transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
 }
 
 .btn:hover {
     transform: translateY(-3px);
-    background: rgba(255,255,255,0.2);
-    box-shadow: 0 0 25px rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.12);
+    box-shadow: 0 0 25px rgba(255,255,255,0.35);
+    border: 1px solid rgba(255,255,255,0.5);
 }
 
 /* ================= ABOUT ================= */
@@ -219,13 +212,18 @@ nav {
 }
 
 .project-card h3 {
-    color: #fff;
     margin-bottom: 12px;
 }
 
 .project-card p {
     color: #cfcfcf;
     font-size: 14px;
+}
+
+.project-links {
+    margin-top: 18px;
+    display: flex;
+    gap: 12px;
 }
 
 /* ================= EXPERIENCE ================= */
@@ -243,11 +241,6 @@ nav {
     transform: translateY(-6px);
     box-shadow: 0 0 40px rgba(255,255,255,0.15);
     border: 1px solid rgba(255,255,255,0.3);
-}
-
-.exp-box h3 {
-    color: #fff;
-    margin-bottom: 6px;
 }
 
 /* ================= CERTIFICATES ================= */
@@ -285,5 +278,60 @@ nav {
 
 .certificate-card p {
     font-size: 14px;
+}
+
+/* ================= IMAGE MODAL ================= */
+
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    padding-top: 80px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.95);
+    backdrop-filter: blur(8px);
+}
+
+.modal-content {
+    display: block;
+    margin: auto;
+    max-width: 85%;
+    max-height: 80%;
+    border-radius: 14px;
+    box-shadow: 0 0 40px rgba(255,255,255,0.4);
+}
+
+.close-btn {
+    position: absolute;
+    top: 25px;
+    right: 40px;
     color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        gap: 1rem;
+        font-size: 12px;
+        padding: 14px 25px;
+    }
+
+    #home h1 {
+        font-size: 40px;
+    }
+
+    #home h3 {
+        font-size: 20px;
+    }
+
+    .section {
+        padding: 100px 6%;
+    }
 }
